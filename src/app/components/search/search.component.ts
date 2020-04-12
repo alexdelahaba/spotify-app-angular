@@ -10,6 +10,9 @@ export class SearchComponent implements OnInit {
   artistas: any[] = [];
   loading: boolean;
 
+  sugerencias: string[] = ['Johnny Cash', 'Bruce Springsteen', 'Guns n Roses', 'AC/DC', 'The Beatles', 'Pino Dangio', 'Franco Battiato'];
+
+
   constructor(private spotify: SpotifyService) {}
 
   ngOnInit(): void {}
@@ -17,7 +20,7 @@ export class SearchComponent implements OnInit {
   buscar(termino: string) {
     this.loading = true;
     console.log(termino);
-    this.spotify.getArtista(termino).subscribe((data: any) => {
+    this.spotify.getArtistas(termino).subscribe((data: any) => {
       console.log(data);
       this.artistas = data;
       this.loading = false;

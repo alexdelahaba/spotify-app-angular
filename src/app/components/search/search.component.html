@@ -2,5 +2,10 @@
     <div class="col">
         <input #termino type="text" (keyup)="buscar(termino.value)" class="form-control" placeholder="Buscar artista..." /> </div>
 </div>
+
+<div class="mt-5">
+    <h3>Sugerencias:</h3>
+    <button (click)="buscar(cantante)" class="btn btn-outline-secondary m-2" *ngFor="let cantante of sugerencias">{{cantante}}</button>
+</div>
 <app-loading class="m-5" *ngIf="loading && termino.value"></app-loading>
 <app-tarjetas *ngIf="!loading" [items]="artistas"></app-tarjetas>

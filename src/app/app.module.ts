@@ -12,6 +12,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { NoimagePipe } from './pipes/noimage.pipe';
 import { TarjetasComponent } from './components/shared/tarjetas/tarjetas.component';
 import { LoadingComponent } from './components/shared/loading/loading.component';
+import { DomseguroPipe } from './pipes/domseguro.pipe';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { LoadingComponent } from './components/shared/loading/loading.component'
     NavbarComponent,
     NoimagePipe,
     TarjetasComponent,
-    LoadingComponent
+    LoadingComponent,
+    DomseguroPipe
   ],
   imports: [
     BrowserModule,
